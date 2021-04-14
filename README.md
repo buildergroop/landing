@@ -1,3 +1,3 @@
 # NextWind
 
-A Next.js, Tailwindcss, Typescript, Yarn berry template.
+A Next.js, Tailwindcss, Typescript and Yarn berry template.
