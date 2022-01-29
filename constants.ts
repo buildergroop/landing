@@ -1,1 +1,1 @@
-export const DISCORD_INVITE = "https://discord.gg/nKnjsJZCsY";
+export const DISCORD_INVITE = "https://discord.gg/builders";
