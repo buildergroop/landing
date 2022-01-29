@@ -1,4 +1,5 @@
-# NextWind
+# Buildergroop Landing
 
-A Next.js, Tailwindcss, Typescript and Yarn berry template.
-This template also has built in dark mode support
+<a rel="noopener noreferrer" target="_blank" href="https://www.vercel.com?utm_source=buildergroop&utm_marketing=oss">
+  <img height="34px" src="https://github.com/buildergroop/landing/blob/main/public/powered-by-vercel.svg" alt="Powered by vercel">
+</a>
