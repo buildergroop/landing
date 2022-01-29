@@ -13,6 +13,11 @@ export default function Home() {
       <div className="h-screen w-screen flex items-center">
         <div className="flex items-center justify-between mx-10 md:mx-auto">
           <div className="flex flex-col gap-[1rem] md:gap-[1.5rem] lg:gap-[2rem] xl:gap-[2.5rem] md:w-[35rem] 2xl:w-[37rem]">
+          <img
+            src="./powered-by-vercel.svg"
+            className="mb-[-120px] h-64 w-64"
+            draggable={false}
+          />
             <h1 className="text-[2.4rem] md:text-[3rem] xl:text-[4rem] 2xl:text-[5rem] font-bold lg:leading-[4rem] xl:leading-[5rem] select-none">
               the home for{" "}
               <span className="moving_background_gradient">young builders</span>
@@ -27,7 +32,7 @@ export default function Home() {
           </div>
           <img
             src="./Graphic.svg"
-            className="hidden lg:block lg:h-[30rem] lg:w-[30rem] xl:h-[37rem] xl:w-[37rem] -mr-[3rem] select-none"
+            className="hidden lg:block lg:h-[30rem] lg:w-[30rem] xl:h-[40rem] xl:w-[37rem] -mr-[3rem] select-none"
             draggable={false}
           />
         </div>
