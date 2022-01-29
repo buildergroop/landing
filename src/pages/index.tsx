@@ -15,7 +15,7 @@ export default function Home() {
           <div className="flex flex-col gap-[1rem] md:gap-[1.5rem] lg:gap-[2rem] xl:gap-[2.5rem] md:w-[35rem] 2xl:w-[37rem]">
           <img
             src="./powered-by-vercel.svg"
-            className="mb-[-120px] h-64 w-64"
+            className="mb-[-120px] h-64 w-64 select-none"
             draggable={false}
           />
             <h1 className="text-[2.4rem] md:text-[3rem] xl:text-[4rem] 2xl:text-[5rem] font-bold lg:leading-[4rem] xl:leading-[5rem] select-none">
