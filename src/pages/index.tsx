@@ -24,7 +24,7 @@ export default function Home() {
             </h1>
             <p className="text-[1.3rem] lg:text-[1.4rem] xl:text-[1.6rem] 2xl:text-[1.8rem] font-regular tracking-wider lg:leading-[2.3rem] xl:leading-[2.7rem] text-white1 md:max-w-[30rem]">
               Buildergroop is where ambitious gen-z builders come together to
-              connect, ideate, ship, and build.
+              connect, ideate, build, and ship.
             </p>
             <div className="mt-3 lg:mt-0">
               <JoinButton />
