@@ -4,16 +4,26 @@ import * as Scroll from "react-scroll";
 
 export default function Home() {
   const Element = Scroll.Element;
+
+  const events = Scroll.Events;
   const scroller = Scroll.scroller;
 
-  const arr = [...Array(100).keys()];
+  const arr = [...Array(1000).keys()];
 
   const scrollTo = () => {
-    scroller.scrollTo(`scrollelem_${arr.length - 1}`, {
-      duration: 1000 * arr.length,
-      smooth: true,
+    scroller.scrollTo(`scrollelem_last`, {
+      duration: 70 * arr.length,
+      smooth: "linear",
     });
   };
+
+  events.scrollEvent.register("end", function (to, element) {
+    // TODO: reverse the scroll direction if at last element
+    console.log(to, element);
+
+    // continue scrolling
+    scrollTo();
+  });
 
   useEffect(() => {
     scrollTo();
@@ -31,15 +41,13 @@ export default function Home() {
         keywords="startup"
         image="https://images-ext-2.discordapp.net/external/q2Jwo_Jmv2yl5JeUn0fHnZFBykmV8YMYMmVJ3XfW4VE/%3Fsize%3D4096/https/cdn.discordapp.com/icons/913668807015407646/a_f8271ba713d72cb11a66b4601b1b044e.gif?width=360&height=360"
       />
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-wrap gap-2 justify-evenly">
         {arr.map((_, i) => (
           <Element
             key={i}
-            name={`scrollelem_${i}`}
-            className="w-screen h-[4rem] border-b border-[#fff]"
-          >
-            no. {i} element
-          </Element>
+            name={i === arr.length - 1 && "scrollelem_last"}
+            className="w-[7rem] h-[7rem] border border-[#fff] rounded-full"
+          ></Element>
         ))}
       </div>
     </>
