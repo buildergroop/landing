@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { Meta } from "../components/Meta";
 import * as Scroll from "react-scroll";
 
@@ -8,11 +8,11 @@ export default function Home() {
   const events = Scroll.Events;
   const scroller = Scroll.scroller;
 
-  const arr = [...Array(1000).keys()];
+  const arr = [...Array(2000).keys()];
 
   const scrollTo = () => {
     scroller.scrollTo(`scrollelem_last`, {
-      duration: 70 * arr.length,
+      duration: 150 * arr.length,
       smooth: "linear",
     });
   };
@@ -41,13 +41,13 @@ export default function Home() {
         keywords="startup"
         image="https://images-ext-2.discordapp.net/external/q2Jwo_Jmv2yl5JeUn0fHnZFBykmV8YMYMmVJ3XfW4VE/%3Fsize%3D4096/https/cdn.discordapp.com/icons/913668807015407646/a_f8271ba713d72cb11a66b4601b1b044e.gif?width=360&height=360"
       />
-      <div className="min-h-screen flex flex-wrap gap-2 justify-evenly">
+      <div className={`min-h-screen flex flex-wrap gap-2 justify-evenly`}>
         {arr.map((_, i) => (
           <Element
             key={i}
-            name={i === arr.length - 1 && "scrollelem_last"}
+            name={i === arr.length - 1 ? "scrollelem_last" : ""}
             className="w-[7rem] h-[7rem] border border-[#fff] rounded-full"
-          ></Element>
+          />
         ))}
       </div>
     </>

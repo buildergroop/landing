@@ -9,13 +9,8 @@ body,
   font-family: "Kanit", sans-serif;
 }
 
-.moving_background_gradient {
-  background: url("https://media4.giphy.com/media/xT0xepIsg7kK2ZZO0g/200w.webp?cid=ecf05e47c7x8w04ntrx8eboq2i6z69xoxkllraomr10i1vuc&rid=200w.webp&ct=g");
-  background-size: cover;
-  background-position: center;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+::-webkit-scrollbar {
+  display: none;
 }
 
 @import "tailwindcss/utilities";
