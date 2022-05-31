@@ -14,7 +14,7 @@ export const Navbar = () => {
       <Logo />
 
       {/* links */}
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-6">
         {links.map((link) => {
           return (
             <a

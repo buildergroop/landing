@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import { Meta } from "../components/Meta";
 import * as Scroll from "react-scroll";
+import { Hero } from "../components/Hero";
+
+import { Meta } from "../components/Meta";
+import { Navbar } from "../components/Navbar";
 
 import json from "../static/avatars.json";
-import { elemInViewport } from "../util/elemInViewport";
-import { Navbar } from "../components/Navbar";
 const avatars = json.avatars;
 
 export default function Home() {
@@ -57,21 +58,25 @@ export default function Home() {
       {/* Body */}
       <div className={`min-h-screen flex`}>
         {/* Content */}
-        <div className="w-screen h-screen z-[2] fixed p-[2rem] lg:p-[4rem]">
+        <div
+          className="w-screen h-screen z-[999] fixed p-[2rem] lg:p-[4rem] flex flex-col justify-between"
+          style={{ backdropFilter: "blur(10px)" }}
+        >
           <Navbar />
+          <Hero />
+          <div className=""></div>
         </div>
 
         {/* Background Layer 2 */}
         <div
-          className="w-screen h-screen fixed bg-[#000] z-[1]"
+          className="w-screen h-screen fixed bg-[#000] opacity-90 z-[2]"
           style={{
             backgroundImage: `url("./DottedBackground.png")`,
-            backdropFilter: "blur(5px)",
           }}
         />
 
         {/* Background Layer 1 */}
-        <div className="min-h-screen flex flex-wrap gap-2 justify-evenly z-[-1] absolute">
+        <div className="min-h-screen flex flex-wrap gap-2 justify-evenly z-[-1]">
           {arr.map((src, i) => (
             <Element
               key={i}

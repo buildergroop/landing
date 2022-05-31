@@ -17,4 +17,25 @@ body,
   font-family: "Krona One", sans-serif;
 }
 
+.headingGradient {
+  background: radial-gradient(
+    101% 102.89% at 0% 100%,
+    #2e5cff 0%,
+    #db00ff 49.31%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.backgroundGradient {
+  background: radial-gradient(
+    119.66% 120.34% at 0% 100%,
+    #ffba34 0%,
+    #2e5cff 0%,
+    #db00ff 57.59%
+  );
+}
+
 @import "tailwindcss/utilities";

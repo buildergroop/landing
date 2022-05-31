@@ -1783,6 +1783,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cxs@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "cxs@npm:6.2.0"
+  checksum: 792f070d9f2f5144c5ed9e03db8b7e53310217db7149fc2131cd376936ae7d26edb0fa31a4dfa6ccea595f6cddc134ac6c51fa077b1c848bb9a409f0b525f568
+  languageName: node
+  linkType: hard
+
 "data-uri-to-buffer@npm:3.0.1":
   version: 3.0.1
   resolution: "data-uri-to-buffer@npm:3.0.1"
@@ -3268,6 +3275,7 @@ __metadata:
     react: 17.0.2
     react-dom: 17.0.2
     react-scroll: ^1.8.7
+    react-text-loop: ^2.3.0
     tailwindcss: ^3.0.8
     typescript: ^4.4.4
   languageName: unknown
@@ -3579,6 +3587,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"performance-now@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "performance-now@npm:0.2.0"
+  checksum: 2020aecc3980c280bf0a0382d476cf4e725a10433e853f853c57bc3ed084ab8aa880fac87e92d1b44d30138b8da2d2b77aad321ef3d7ce50b34500a4f4f84d0f
+  languageName: node
+  linkType: hard
+
+"performance-now@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "performance-now@npm:2.1.0"
+  checksum: 534e641aa8f7cba160f0afec0599b6cecefbb516a2e837b512be0adbe6c1da5550e89c78059c7fabc5c9ffdf6627edabe23eb7c518c4500067a898fa65c2b550
+  languageName: node
+  linkType: hard
+
 "picocolors@npm:^0.2.1":
   version: 0.2.1
   resolution: "picocolors@npm:0.2.1"
@@ -3758,7 +3780,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.7.2":
+"prop-types@npm:^15.5.8, prop-types@npm:^15.7.2":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -3844,6 +3866,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"raf@npm:^3.1.0":
+  version: 3.4.1
+  resolution: "raf@npm:3.4.1"
+  dependencies:
+    performance-now: ^2.1.0
+  checksum: 50ba284e481c8185dbcf45fc4618ba3aec580bb50c9121385d5698cb6012fe516d2015b1df6dd407a7b7c58d44be8086108236affbce1861edd6b44637c8cd52
+  languageName: node
+  linkType: hard
+
 "randombytes@npm:^2.0.0, randombytes@npm:^2.0.1, randombytes@npm:^2.0.5":
   version: 2.1.0
   resolution: "randombytes@npm:2.1.0"
@@ -3888,6 +3919,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-fast-compare@npm:2.0.4":
+  version: 2.0.4
+  resolution: "react-fast-compare@npm:2.0.4"
+  checksum: 06046595f90a4e3e3a56f40a8078c00aa71bdb064ddb98343f577f546aa22e888831fd45f009c93b34707cc842b4c637737e956fd13d6f80607ee92fb9cf9a1c
+  languageName: node
+  linkType: hard
+
 "react-is@npm:17.0.2":
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
@@ -3899,6 +3937,19 @@ __metadata:
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
+  languageName: node
+  linkType: hard
+
+"react-motion@npm:^0.5.2":
+  version: 0.5.2
+  resolution: "react-motion@npm:0.5.2"
+  dependencies:
+    performance-now: ^0.2.0
+    prop-types: ^15.5.8
+    raf: ^3.1.0
+  peerDependencies:
+    react: ^0.14.9 || ^15.3.0 || ^16.0.0
+  checksum: b1b2ab15d0e7492be827576fa7238c11679b52495a640b1234400771fdeac9ded8909532135b4a84be28e21e63dc97d54758d08ba280f90409b54104730b29c0
   languageName: node
   linkType: hard
 
@@ -3919,6 +3970,20 @@ __metadata:
     react: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
     react-dom: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
   checksum: 37714995f120bcc781e4a445c0e9bd4b7f673674c84e851a96493878fe804799e1ff8ce3ead4c8aa1b5eb3bb039e043ff029607196d269a75c39d9257a372e7f
+  languageName: node
+  linkType: hard
+
+"react-text-loop@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "react-text-loop@npm:2.3.0"
+  dependencies:
+    cxs: ^6.2.0
+    react-fast-compare: 2.0.4
+    react-motion: ^0.5.2
+  peerDependencies:
+    react: ^15.0.1 || ^16.0.1
+    react-dom: ^15.0.1 || ^16.0.1
+  checksum: 8bf07265b35866d2ac086eceb40a8d6b9db8838b8047cef15ef4a9e5081aa7aa2c2fe51e7aa4c17ee379ac75f44cf16c2d541d3da134e8981b515bb36c499b9b
   languageName: node
   linkType: hard
 
