@@ -76,7 +76,7 @@ export default function Home() {
         />
 
         {/* Background Layer 1 */}
-        <div className="min-h-screen flex flex-wrap gap-2 justify-evenly z-[-1]">
+        <div className="flex flex-wrap gap-2 justify-evenly z-[-1]">
           {arr.map((src, i) => (
             <Element
               key={i}
