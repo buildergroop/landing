@@ -6,11 +6,15 @@ body,
 #__next {
   height: 100vh;
   width: 100vw;
-  font-family: "Kanit", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+.headingFont {
+  font-family: "Krona One", sans-serif;
 }
 
 @import "tailwindcss/utilities";
