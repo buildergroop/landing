@@ -1,40 +1,93 @@
-import { JoinButton } from "../components/JoinButton";
+import { useEffect, useRef, useState } from "react";
+import * as Scroll from "react-scroll";
+import { Hero } from "../components/Hero";
+
 import { Meta } from "../components/Meta";
+import { Navbar } from "../components/Navbar";
+
+import json from "../static/avatars.json";
+const avatars = json.avatars;
 
 export default function Home() {
+  const Element = Scroll.Element;
+
+  const events = Scroll.Events;
+  const scroller = Scroll.scroller;
+
+  const lastElemRef = useRef();
+
+  const [arr, setArr] = useState([...avatars]);
+
+  const scrollTo = () => {
+    scroller.scrollTo(`scrollelem_last`, {
+      duration: 150 * arr.length,
+      smooth: "linear",
+    });
+  };
+
+  events.scrollEvent.register("end", function (to, element) {
+    // const append = arr.slice(
+    //   Math.random() * (arr.length - 0),
+    //   Math.random() * (arr.length - 0)
+    // );
+
+    // setArr((c) => [...c, ...append]);
+
+    // continue scrolling
+    // elemInViewport(lastElemRef.current);
+    scrollTo();
+  });
+
+  useEffect(() => {
+    scrollTo();
+  }, [arr]);
+
+  useEffect(() => {
+    scrollTo();
+  }, []);
+
   return (
     <>
-      <Meta
-        title="Buildergroop"
-        description="The home for ambitious gen-z builders."
-        keywords="startup"
-        image="https://images-ext-2.discordapp.net/external/q2Jwo_Jmv2yl5JeUn0fHnZFBykmV8YMYMmVJ3XfW4VE/%3Fsize%3D4096/https/cdn.discordapp.com/icons/913668807015407646/a_f8271ba713d72cb11a66b4601b1b044e.gif?width=360&height=360"
-      />
-      <div className="h-screen w-screen flex items-center">
-        <div className="flex items-center justify-between mx-10 md:mx-auto">
-          <div className="flex flex-col gap-[1rem] lg:gap-[1.5rem] xl:gap-[2rem] md:w-[35rem] 2xl:w-[37rem] lg:-mt-10">
-            <img
-              src="./powered-by-vercel.svg"
-              className="-ml-3 mb-[-100px] lg:mb-[-120px] h-[15rem] w-[15rem]"
-              draggable={false}
-            />
-            <h1 className="text-[2.6rem] md:text-[3rem] xl:text-[4rem] 2xl:text-[5rem] font-bold leading-[3rem] lg:leading-[4rem] xl:leading-[5rem] select-none">
-              the home for{" "}
-              <span className="moving_background_gradient">young builders</span>
-            </h1>
-            <p className="text-[1.3rem] lg:text-[1.4rem] xl:text-[1.6rem] 2xl:text-[1.8rem] font-regular tracking-wider lg:leading-[2.3rem] xl:leading-[2.7rem] text-white1 md:max-w-[30rem]">
-              Buildergroop is where ambitious gen-z builders come together to
-              connect, ideate, ship, and build.
-            </p>
-            <div className="mt-3 lg:mt-0">
-              <JoinButton />
-            </div>
+      <Meta title="buildergroop" />
+
+      {/* Body */}
+      <div className={`min-h-screen flex`}>
+        {/* Content */}
+        <div
+          className="w-screen h-screen z-[999] fixed p-[4rem] lg:py-[4rem] lg:px-[8rem]"
+          style={{ backdropFilter: "blur(10px)" }}
+        >
+          <div className="w-full h-full max-w-[90rem] mx-auto flex flex-col">
+            <Navbar />
+            <Hero />
+            <div className=""></div>
           </div>
-          <img
-            src="./Graphic.svg"
-            className="hidden lg:block lg:h-[30rem] lg:w-[30rem] xl:h-[40rem] xl:w-[37rem] -mr-[3rem] select-none"
-            draggable={false}
-          />
+        </div>
+
+        {/* Background Layer 2 */}
+        <div
+          className="w-screen h-screen fixed bg-[#000] opacity-90 z-[2]"
+          style={{
+            backgroundImage: `url("./DottedBackground.png")`,
+          }}
+        />
+
+        {/* Background Layer 1 */}
+        <div className="flex flex-wrap gap-2 justify-evenly z-[-1]">
+          {arr.map((src, i) => (
+            <Element
+              key={i}
+              name={i === arr.length - 1 ? "scrollelem_last" : ""}
+              ref={i === arr.length - 1 ? lastElemRef : undefined}
+              className="w-[7rem] h-[7rem] rounded-full"
+              style={{
+                backgroundImage: `url(${src})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundColor: "#f1f1f1",
+              }}
+            />
+          ))}
         </div>
       </div>
     </>
