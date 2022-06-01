@@ -66,7 +66,7 @@ export default function Home() {
 
         {/* Background Layer 2 */}
         <div
-          className="w-screen h-screen fixed bg-[#000] opacity-90 z-[2]"
+          className="w-screen h-screen fixed bg-[#000] opacity-80 z-[2]"
           style={{
             backgroundImage: `url("./DottedBackground.png")`,
           }}

@@ -4,6 +4,7 @@ import { Logo } from "./Logo";
 
 const links = [
   { title: "events", href: "/", tooltip: "coming soon" },
+  { title: "perks", href: "/", tooltip: "coming soon" },
   { title: "supporters", href: "/", tooltip: "coming soon" },
   { title: "team", href: "/", tooltip: "coming soon" },
   {

@@ -23,7 +23,7 @@ export const Hero = () => {
           young builders network, build, and grow together.
         </p>
       </div>
-      <div className="flex items-center gap-2 w-full lg:max-w-[80%]">
+      <div className="flex flex-col md:flex-row md:items-center gap-2 w-full lg:max-w-[80%]">
         <Button
           width="w-auto"
           variant="gradient"
