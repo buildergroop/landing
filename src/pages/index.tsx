@@ -48,23 +48,20 @@ export default function Home() {
 
   return (
     <>
-      <Meta
-        title="Buildergroop"
-        description="The home for ambitious gen-z builders."
-        keywords="startup"
-        image="https://images-ext-2.discordapp.net/external/q2Jwo_Jmv2yl5JeUn0fHnZFBykmV8YMYMmVJ3XfW4VE/%3Fsize%3D4096/https/cdn.discordapp.com/icons/913668807015407646/a_f8271ba713d72cb11a66b4601b1b044e.gif?width=360&height=360"
-      />
+      <Meta title="buildergroop" />
 
       {/* Body */}
       <div className={`min-h-screen flex`}>
         {/* Content */}
         <div
-          className="w-screen h-screen z-[999] fixed p-[2rem] lg:p-[4rem] flex flex-col justify-between"
+          className="w-screen h-screen z-[999] fixed p-[4rem] lg:py-[4rem] lg:px-[8rem]"
           style={{ backdropFilter: "blur(10px)" }}
         >
-          <Navbar />
-          <Hero />
-          <div className=""></div>
+          <div className="w-full h-full max-w-[90rem] mx-auto flex flex-col">
+            <Navbar />
+            <Hero />
+            <div className=""></div>
+          </div>
         </div>
 
         {/* Background Layer 2 */}

@@ -12,7 +12,7 @@ export const Logo = () => {
       {showIcon && (
         <img
           src="./HammerLogo.svg"
-          className={`w-[3rem] h-[3rem] transition-all absolute`}
+          className={`w-[3rem] h-[3rem] transition-all absolute -mb-[0.4rem]`}
         />
       )}
 

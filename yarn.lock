@@ -3276,6 +3276,7 @@ __metadata:
     react-dom: 17.0.2
     react-scroll: ^1.8.7
     react-text-loop: ^2.3.0
+    react-tooltip: ^4.2.21
     tailwindcss: ^3.0.8
     typescript: ^4.4.4
   languageName: unknown
@@ -3984,6 +3985,19 @@ __metadata:
     react: ^15.0.1 || ^16.0.1
     react-dom: ^15.0.1 || ^16.0.1
   checksum: 8bf07265b35866d2ac086eceb40a8d6b9db8838b8047cef15ef4a9e5081aa7aa2c2fe51e7aa4c17ee379ac75f44cf16c2d541d3da134e8981b515bb36c499b9b
+  languageName: node
+  linkType: hard
+
+"react-tooltip@npm:^4.2.21":
+  version: 4.2.21
+  resolution: "react-tooltip@npm:4.2.21"
+  dependencies:
+    prop-types: ^15.7.2
+    uuid: ^7.0.3
+  peerDependencies:
+    react: ">=16.0.0"
+    react-dom: ">=16.0.0"
+  checksum: dd145ae90768a8af5518672bfd91b985a57ff021b50a60044caedd872b457ea5134793cf8d5426bd45587fa6f722320936009f5c6533a4f94d665c0a23589222
   languageName: node
   linkType: hard
 
@@ -4758,6 +4772,15 @@ typescript@^4.4.4:
     safe-buffer: ^5.1.2
     which-typed-array: ^1.1.2
   checksum: e64d4a901999017d3125ba20d66f3f97429240ed1f7cf60a705abba8a4901277b909250677f616e043cd49f7ce5e4f2f4df5aa3960e8fdf83941f828f3643e9a
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^7.0.3":
+  version: 7.0.3
+  resolution: "uuid@npm:7.0.3"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: f5b7b5cc28accac68d5c083fd51cca64896639ebd4cca88c6cfb363801aaa83aa439c86dfc8446ea250a7a98d17afd2ad9e88d9d4958c79a412eccb93bae29de
   languageName: node
   linkType: hard
 
